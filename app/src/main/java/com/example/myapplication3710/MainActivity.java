@@ -19,7 +19,12 @@ public class MainActivity extends AppCompatActivity {
         tv1 = findViewById(R.id.textView);
         botao=findViewById(R.id.button2);
 
-      //  botao.setOnClickListener();
+        botao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                funcao1();
+            }
+        });
         //TODO fazer tela login
     }
 
