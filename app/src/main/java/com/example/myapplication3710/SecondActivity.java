@@ -8,28 +8,30 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-
-public class MainActivity extends AppCompatActivity {
-
+public class SecondActivity extends AppCompatActivity {
     TextView tv1;
-    Button botao;
+    Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        tv1 = findViewById(R.id.textView);
-        botao=findViewById(R.id.button2);
-        botao.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_second2);
+        tv1 = findViewById(R.id.texto);
+        button=findViewById(R.id.botao);
+
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                proximaTela(v);
+                proximaTela(v,tv1);
             }
         });
-        //TODO fazer tela login
     }
 
-    public void proximaTela(View View){
-        Intent intent = new Intent(this, home_menu.class);
+
+    public void proximaTela(View View,TextView txt){
+        Intent intent = new Intent(this, TerceiroActivity.class);
         startActivity(intent);
     }
+
+
+
 }
